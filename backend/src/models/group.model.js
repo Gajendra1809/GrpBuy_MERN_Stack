@@ -4,7 +4,8 @@ const groupSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        max: 100
     },
     creator: {
         type: mongoose.Schema.Types.ObjectId,
@@ -35,7 +36,12 @@ const groupSchema = new mongoose.Schema({
     minCount: {
         type: Number,
         default: 0,
-        required: true
+        required: true,
+        max: 100
+    },
+    imageUrl: {
+        type: String,
+        default: ""
     }
 }, {timestamps: true});
 

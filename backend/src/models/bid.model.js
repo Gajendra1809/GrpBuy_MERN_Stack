@@ -16,7 +16,8 @@ const bidSchema = new mongoose.Schema({
         required: true
     },
     other: {
-        type: String
+        type: String,
+        max: 500
     }
 }, {timestamps: true});
     

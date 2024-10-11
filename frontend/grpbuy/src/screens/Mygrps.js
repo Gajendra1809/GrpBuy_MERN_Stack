@@ -142,7 +142,7 @@ export default function Mygrps() {
                                             return (
                                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" key={group.id}>
                                                     <td className="p-4">
-                                                        <img src="https://flowbite.com/docs/images/products/apple-watch.png" className="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch" />
+                                                        <img src={group.imageUrl} className="w-16 md:w-32 max-w-full max-h-full" alt="product image" />
                                                     </td>
                                                     <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                                                         <Link to={`/details/${group._id}`}>{group.name}</Link>&nbsp;&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i><br />
@@ -187,7 +187,7 @@ export default function Mygrps() {
                                             return (
                                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" key={bid.id}>
                                                     <td className="p-4">
-                                                        <img src="https://flowbite.com/docs/images/products/apple-watch.png" className="w-16 md:w-32 max-w-full max-h-full" alt="Apple Watch" />
+                                                    <img src={bid.groupId.imageUrl} className="w-16 md:w-32 max-w-full max-h-full" alt="product image" />
                                                     </td>
                                                     <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                                                         {bid.groupId.name}

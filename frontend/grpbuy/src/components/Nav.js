@@ -47,8 +47,10 @@ export default function Nav() {
                         <div className="navbar-center hidden lg:flex">
                          <ul className="menu menu-horizontal px-1 base-100 text-white">
                              <li><Link to="/home">Home</Link></li>
-                             <li><Link to="/creategrp">Create Grp</Link></li>
                              <li><Link to="/mygrps">My Groups/Bids</Link></li>
+                             {
+                                 user.role == "admin" ? <li><Link to="/creategrp">Create Grp</Link></li> : ""
+                             }
                              {
                                  user.role == "admin" ? <li><Link to="">Dashboard</Link></li> : ""
                              }
@@ -61,7 +63,7 @@ export default function Nav() {
                         user!=null ?
                         <div className="avatar navbar-end relative">
                 <div className="mask mask-hexagon w-24 btn" onClick={() => setDropdownOpen(!dropdownOpen)}>
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Profile" />
+                    <img src={user.imageUrl} alt="Profile" />
                 </div>
 
                 {dropdownOpen && (

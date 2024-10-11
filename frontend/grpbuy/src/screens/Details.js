@@ -109,7 +109,7 @@ export default function Details() {
                         <div class="md:flex items-center -mx-10">
                             <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
                                 <div class="relative">
-                                    <img src="https://pngimg.com/uploads/raincoat/raincoat_PNG53.png" class="w-full relative z-10" alt="" />
+                                    <img src={product.imageUrl} class="w-full relative z-10" alt="product image" />
                                     <div class="border-4 border-yellow-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@ export default function Details() {
                                                                     <div className="avatar">
                                                                         <div className="mask mask-squircle h-12 w-12">
                                                                             <img
-                                                                                src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                                                                                src={bid.bidderId.imageUrl}
                                                                                 alt="Avatar Tailwind CSS Component" />
                                                                         </div>
                                                                     </div>

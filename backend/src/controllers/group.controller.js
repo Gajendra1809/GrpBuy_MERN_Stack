@@ -10,7 +10,8 @@ export const createGroup = async (req, res) => {
             name: req.body.name,
             creator: req.user._id,
             categoryId: req.body.categoryId,
-            minCount: req.body.minCount
+            minCount: req.body.minCount,
+            imageUrl: req.body.imageUrl
         })
         return successResponse(res, group, "Group created successfully");
     } catch (error) {

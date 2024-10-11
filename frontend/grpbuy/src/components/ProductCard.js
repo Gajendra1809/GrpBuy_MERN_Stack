@@ -7,8 +7,8 @@ export default function ProductCard(props) {
             <div className="card bg-base-100 w-96 shadow-xl mx-10">
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
+                        src={props.product.imageUrl? props.product.imageUrl : "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"}
+                        alt="Shoes"/>
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
